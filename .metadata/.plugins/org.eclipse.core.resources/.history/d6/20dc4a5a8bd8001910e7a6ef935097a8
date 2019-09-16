@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body class="view" style = "background-image: url('images/titanic.jpg');">
+
+<div class="jumbotron text-center">
+  <h1>Titanic Museum Belfast</h1>
+  <p>Welcome to the home of the Titanic Museum Belfast!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-info">About Us</button>
+      <p>Find out more about the centre</p>
+    </div>
+    <div class="col-sm-4">
+    <button type="button" class="btn btn-info">Events</button>
+      <p>Find out more about the events we offer</p>
+    </div>
+    <div class="col-sm-4">
+    <button type="button" class="btn btn-info">Contact Us</button>       
+      <p>Contact us if you have any more questions</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
