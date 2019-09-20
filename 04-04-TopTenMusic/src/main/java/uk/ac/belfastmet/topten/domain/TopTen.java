@@ -41,6 +41,10 @@ public class TopTen {
 		this.image = image;
 	}
 	
+	public String toString() {
+		return soundtrack + "" + album;
+	}
+	
 }
 
 

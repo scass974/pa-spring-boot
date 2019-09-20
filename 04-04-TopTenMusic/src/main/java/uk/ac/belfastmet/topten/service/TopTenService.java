@@ -16,32 +16,32 @@ public class TopTenService {
 	public ArrayList<TopTen> getSoundtrackTopTens() {
 		this.soundtrackTopTens = new ArrayList<TopTen>();
 		
-		this.soundtrackTopTens.add(new TopTen("Victory", "", "Victory.png"));
-		this.soundtrackTopTens.add(new TopTen("StarSky", "", "StarSky.png"));
-		this.soundtrackTopTens.add(new TopTen("NorweiganPirate", "", "NorweiganPirate.png"));
-		this.soundtrackTopTens.add(new TopTen("Unbreakable", "", "Unbreakable.png"));
-		this.soundtrackTopTens.add(new TopTen("Impossible", "", "Impossible.png"));
-		this.soundtrackTopTens.add(new TopTen("Blackheart", "", "Blackheart.png"));
-		this.soundtrackTopTens.add(new TopTen("ForTheWin", "", "ForTheWin.png"));
-		this.soundtrackTopTens.add(new TopTen("HeartOfCourage", "", "HeartOfCourage.png"));
-		this.soundtrackTopTens.add(new TopTen("DragonRider", "", "DragonRider.png"));
-		this.soundtrackTopTens.add(new TopTen("ElDorado", "", "ElDorado.png"));
+		this.soundtrackTopTens.add(new TopTen("Victory", "Epic Music", "Victory.jpg"));
+		this.soundtrackTopTens.add(new TopTen("StarSky", "Epic Music", "StarSky.jpg"));
+		this.soundtrackTopTens.add(new TopTen("NorweiganPirate", "Epic Music", "NorweiganPirate.jpg"));
+		this.soundtrackTopTens.add(new TopTen("Unbreakable", "Epic Music", "Unbreakable.jpg"));
+		this.soundtrackTopTens.add(new TopTen("Impossible", "Epic Music", "Impossible.jpg"));
+		this.soundtrackTopTens.add(new TopTen("Blackheart", "Epic Music", "Blackheart.jpg"));
+		this.soundtrackTopTens.add(new TopTen("ForTheWin", "Epic Music", "ForTheWin.jpg"));
+		this.soundtrackTopTens.add(new TopTen("HeartOfCourage", "Epic Musice", "HeartOfCourage.jpg"));
+		this.soundtrackTopTens.add(new TopTen("DragonRider", "Epic Music", "DragonRider.jpg"));
+		this.soundtrackTopTens.add(new TopTen("ElDorado", "Epic Music", "ElDorado.jpg"));
 		return this.soundtrackTopTens;
 	}
 	
 	public ArrayList<TopTen> getAlbumTopTens() {
 		this.albumTopTens = new ArrayList<TopTen>();
 
-		this.albumTopTens.add(new TopTen("Dragon", "", "Dragon.png"));
-		this.albumTopTens.add(new TopTen("Unleashed", "", "Unleashed.png"));
-		this.albumTopTens.add(new TopTen("Invincible", "", "Invincible.png"));
-		this.albumTopTens.add(new TopTen("BattleCry", "", "BattleCry.png"));
-		this.albumTopTens.add(new TopTen("SkyWorld", "", "SkyWorld.png"));
-		this.albumTopTens.add(new TopTen("Archangel", "", "Archangel.png"));
-		this.albumTopTens.add(new TopTen("Illusions", "", "Illusions.png"));
-		this.albumTopTens.add(new TopTen("Miracles", "", "Miracles.png"));
-		this.albumTopTens.add(new TopTen("Vanquish", "", "Vanquish.png"));
-		this.albumTopTens.add(new TopTen("Solaris", "", "Solaris.png"));
+		this.albumTopTens.add(new TopTen("Dragon", "Epic Music", "Dragon.jpg"));
+		this.albumTopTens.add(new TopTen("Unleashed", "Epic Music", "Unleashed.jpg"));
+		this.albumTopTens.add(new TopTen("Invincible", "Epic Music", "Invincible.jpg"));
+		this.albumTopTens.add(new TopTen("Battlecry", "Epic Music", "Battlecry.jpg"));
+		this.albumTopTens.add(new TopTen("SkyWorld", "Epic Music", "SkyWorld.jpg"));
+		this.albumTopTens.add(new TopTen("Archangel", "Epic Music", "Archangel.jpg"));
+		this.albumTopTens.add(new TopTen("Illusions", "Epic Music", "Illusions.jpg"));
+		this.albumTopTens.add(new TopTen("Miracles", "Epic Music", "Miracles.jpg"));
+		this.albumTopTens.add(new TopTen("Vanquish", "Epic Music", "Vanquish.jpg"));
+		this.albumTopTens.add(new TopTen("Solaris", "Epic Music", "Solaris.jpg"));
 		
 		return this.albumTopTens;
 	}
