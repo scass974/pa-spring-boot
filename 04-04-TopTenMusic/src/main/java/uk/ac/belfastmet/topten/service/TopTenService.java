@@ -2,8 +2,11 @@ package uk.ac.belfastmet.topten.service;
 
 import java.util.ArrayList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import uk.ac.belfastmet.topten.controller.TopTenController;
 import uk.ac.belfastmet.topten.domain.TopTen;
 
 @Service
@@ -12,6 +15,8 @@ public class TopTenService {
 	
 	private ArrayList<TopTen> soundtrackTopTens;
 	private ArrayList<TopTen> albumTopTens;
+	
+	Logger topTenLogger = LoggerFactory.getLogger(TopTenController.class);
 	
 	public ArrayList<TopTen> getSoundtrackTopTens() {
 		this.soundtrackTopTens = new ArrayList<TopTen>();
@@ -23,9 +28,10 @@ public class TopTenService {
 		this.soundtrackTopTens.add(new TopTen("Impossible", "Epic Music", "Impossible.jpg"));
 		this.soundtrackTopTens.add(new TopTen("Blackheart", "Epic Music", "Blackheart.jpg"));
 		this.soundtrackTopTens.add(new TopTen("ForTheWin", "Epic Music", "ForTheWin.jpg"));
-		this.soundtrackTopTens.add(new TopTen("HeartOfCourage", "Epic Musice", "HeartOfCourage.jpg"));
+		this.soundtrackTopTens.add(new TopTen("HeartOfCourage", "Epic Music", "HeartOfCourage.jpg"));
 		this.soundtrackTopTens.add(new TopTen("DragonRider", "Epic Music", "DragonRider.jpg"));
 		this.soundtrackTopTens.add(new TopTen("ElDorado", "Epic Music", "ElDorado.jpg"));
+		topTenLogger.info("Populated soundtrack list with: " + this.soundtrackTopTens.toString());
 		return this.soundtrackTopTens;
 	}
 	
@@ -42,7 +48,7 @@ public class TopTenService {
 		this.albumTopTens.add(new TopTen("Miracles", "Epic Music", "Miracles.jpg"));
 		this.albumTopTens.add(new TopTen("Vanquish", "Epic Music", "Vanquish.jpg"));
 		this.albumTopTens.add(new TopTen("Solaris", "Epic Music", "Solaris.jpg"));
-		
+		topTenLogger.info("Populated album list with: " + this.albumTopTens.toString());
 		return this.albumTopTens;
 	}
 
