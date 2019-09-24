@@ -16,6 +16,7 @@ import uk.ac.belfastmet.topten.service.TopTenService;
 
 public class TopTenController {
 	
+    //Created logger
 	Logger topTenLogger = LoggerFactory.getLogger(TopTenController.class);
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -23,7 +24,7 @@ public class TopTenController {
 		topTenLogger.info("Accessed home page");
 		return "index";
 	}
-//	Returned tracks page
+    //Returns tracks page
 	@RequestMapping(value = "/tracks", method = RequestMethod.GET)
 	public String tracksPage(Model model) {
 		TopTenService topTenService = new TopTenService();
@@ -32,7 +33,7 @@ public class TopTenController {
 		topTenLogger.info("Accessed tracks page");
 		return "tracks";
 	}
-//	Returned albums page 
+    //Returns albums page 
 	@RequestMapping(value = "/albums", method = RequestMethod.GET)
 	public String albumsPage(Model model) {
 		TopTenService topTenService = new TopTenService();

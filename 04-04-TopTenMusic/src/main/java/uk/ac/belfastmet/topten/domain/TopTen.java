@@ -6,6 +6,7 @@ public class TopTen {
 	private String album;
 	private String image;
 	
+	//Creates constructor for top ten
 	public TopTen() {
 		super();
 	}
@@ -17,6 +18,7 @@ public class TopTen {
 		this.image = image;
 	}
 
+	//Creates getters and setters for top ten variables
 	public String getSoundtrack() {
 		return soundtrack;
 	}

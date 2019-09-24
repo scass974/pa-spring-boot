@@ -16,11 +16,14 @@ public class TopTenService {
 	private ArrayList<TopTen> soundtrackTopTens;
 	private ArrayList<TopTen> albumTopTens;
 	
+	//Created logger
 	Logger topTenLogger = LoggerFactory.getLogger(TopTenController.class);
 	
+	//Created arraylist of soundtracks
 	public ArrayList<TopTen> getSoundtrackTopTens() {
 		this.soundtrackTopTens = new ArrayList<TopTen>();
 		
+		//Added soundtracks to the arraylist
 		this.soundtrackTopTens.add(new TopTen("Victory", "Epic Music", "Victory.jpg"));
 		this.soundtrackTopTens.add(new TopTen("StarSky", "Epic Music", "StarSky.jpg"));
 		this.soundtrackTopTens.add(new TopTen("NorweiganPirate", "Epic Music", "NorweiganPirate.jpg"));
@@ -32,12 +35,15 @@ public class TopTenService {
 		this.soundtrackTopTens.add(new TopTen("DragonRider", "Epic Music", "DragonRider.jpg"));
 		this.soundtrackTopTens.add(new TopTen("ElDorado", "Epic Music", "ElDorado.jpg"));
 		topTenLogger.info("Populated soundtrack list with: " + this.soundtrackTopTens.toString());
+		//Returns list of soundtracks
 		return this.soundtrackTopTens;
 	}
 	
+	//Created arraylist of albums
 	public ArrayList<TopTen> getAlbumTopTens() {
 		this.albumTopTens = new ArrayList<TopTen>();
 
+		//Added albums to arraylist
 		this.albumTopTens.add(new TopTen("Dragon", "Epic Music", "Dragon.jpg"));
 		this.albumTopTens.add(new TopTen("Unleashed", "Epic Music", "Unleashed.jpg"));
 		this.albumTopTens.add(new TopTen("Invincible", "Epic Music", "Invincible.jpg"));
@@ -49,6 +55,7 @@ public class TopTenService {
 		this.albumTopTens.add(new TopTen("Vanquish", "Epic Music", "Vanquish.jpg"));
 		this.albumTopTens.add(new TopTen("Solaris", "Epic Music", "Solaris.jpg"));
 		topTenLogger.info("Populated album list with: " + this.albumTopTens.toString());
+		//Returns list of albums
 		return this.albumTopTens;
 	}
 
