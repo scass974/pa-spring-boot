@@ -13,9 +13,10 @@ import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 @Service
 public class ToDoService {
-	
+
 	@Autowired
 	private TaskRepository taskRepository;
 
@@ -23,10 +24,13 @@ public class ToDoService {
 	Logger logger = LoggerFactory.getLogger(ToDoController.class);
 	ArrayList<Task> tasks = new ArrayList<Task>();
 	ArrayList<Task> completeTasks = new ArrayList<Task>();
-	
+
 	public void getNumberOfTasks() {
+		
+		//log task count from arraylist
 		logger.info("# of tasks: {}", taskRepository.count());
 		
+		//log task count from database
 		Iterable < Task > tasks = taskRepository.findAll();
 		Iterator < Task > iterator = tasks.iterator();
 		while (iterator.hasNext()) {
@@ -60,7 +64,7 @@ public class ToDoService {
 		logger.info("Service - Arraylist populated and returned");
 		return this.tasks;
 	}
-    
+
 	/**
 	 * method to create an arraylist of completed tasks
 	 * @return an arraylist of completed tasks

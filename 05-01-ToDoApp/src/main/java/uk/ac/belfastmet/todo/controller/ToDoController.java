@@ -13,16 +13,17 @@ import uk.ac.belfastmet.todo.service.ToDoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
 @Controller
 @RequestMapping()
 public class ToDoController {
-	
+
 	@Autowired
 	private ToDoService todoService;
 
 	// logger class object for logging info
 	Logger logger = LoggerFactory.getLogger(ToDoController.class);
-	
+
 	/**
 	 * this method requests index page and the getTasks method from service
 	 * @param single model object
@@ -37,10 +38,10 @@ public class ToDoController {
 		model.addAttribute("tasks", todoService.getTasks());
 		logger.info("Controller - Tasks arraylist contents returned to controller");
 		todoService.getNumberOfTasks();
-		
+
 		return "index";
 	}
-	
+
 	/**
 	 * this method requests the login page
 	 * @param single model object
@@ -51,10 +52,10 @@ public class ToDoController {
 		logger.info("Controller - I have reached the login page");
 		model.addAttribute("pageTitle", "ToDO App Login");
 		logger.info("Controller - the page title is set to ToDo App Login");
-		
+
 		return "login";
 	}
-	
+
 	/**
 	 * this method requests completedTasks page and the getCompletedTasks method from service
 	 * @param single model object
@@ -68,7 +69,7 @@ public class ToDoController {
 		logger.info("Controller- call getCompleteTasks method in service");
 		model.addAttribute("tasks", todoService.getCompleteTasks());
 		logger.info("Controller - Complete asks arraylist contents returned to controller");
-		
+
 		return "complete";
 	}
 
