@@ -1,10 +1,16 @@
 package uk.ac.belfastmet.topten.domain;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class TopTen {
 	
 	private String soundtrack;
 	private String album;
 	private String image;
+	private long id;
 	
 	//Creates constructor for top ten
 	public TopTen() {
@@ -19,6 +25,7 @@ public class TopTen {
 	}
 
 	//Creates getters and setters for top ten variables
+	@Column(name = "soundtrack")
 	public String getSoundtrack() {
 		return soundtrack;
 	}
@@ -26,15 +33,14 @@ public class TopTen {
 	public void setSoundtrack(String soundtrack) {
 		this.soundtrack = soundtrack;
 	}
-
+	@Column(name = "album")
 	public String getAlbum() {
 		return album;
 	}
-
 	public void setAlbum(String album) {
 		this.album = album;
 	}
-
+	@Column(name = "image")
 	public String getImage() {
 		return image;
 	}
@@ -45,6 +51,16 @@ public class TopTen {
 	
 	public String toString() {
 		return soundtrack + "" + album;
+	}
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 	
 }

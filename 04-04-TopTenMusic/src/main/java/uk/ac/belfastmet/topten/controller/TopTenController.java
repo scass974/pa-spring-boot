@@ -2,6 +2,7 @@ package uk.ac.belfastmet.topten.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,9 @@ import uk.ac.belfastmet.topten.service.TopTenService;
 
 public class TopTenController {
 	
+	@Autowired
+	private TopTenService topTenService;
+	
     //Created logger
 	Logger topTenLogger = LoggerFactory.getLogger(TopTenController.class);
 	
@@ -27,18 +31,16 @@ public class TopTenController {
     //Returns tracks page
 	@RequestMapping(value = "/tracks", method = RequestMethod.GET)
 	public String tracksPage(Model model) {
-		TopTenService topTenService = new TopTenService();
 		model.addAttribute("pageTitle","Tracks");
-		model.addAttribute("tracks",topTenService.getSoundtrackTopTens());
+		model.addAttribute("tracks",topTenService.getNumberOfTracks());
 		topTenLogger.info("Accessed tracks page");
 		return "tracks";
 	}
     //Returns albums page 
 	@RequestMapping(value = "/albums", method = RequestMethod.GET)
 	public String albumsPage(Model model) {
-		TopTenService topTenService = new TopTenService();
 		model.addAttribute("pageTitle","Albums");
-		model.addAttribute("albums",topTenService.getAlbumTopTens());
+		model.addAttribute("albums",topTenService.getNumberOfTracks());
 		topTenLogger.info("Accessed albums page");
 		return "albums";
 	}
