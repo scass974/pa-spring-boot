@@ -1,9 +1,11 @@
 package uk.ac.belfastmet.dwarfs.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import uk.ac.belfastmet.dwarfs.service.DwarfService;
 
@@ -12,24 +14,25 @@ import uk.ac.belfastmet.dwarfs.service.DwarfService;
 
 public class DwarfsController {
 	
-	@GetMapping()
+	@Autowired
+	private DwarfService dwarfService;
+	
+	@RequestMapping(value="", method = RequestMethod.GET)
 	public String homePage() {
 		return "index";
 	}
 	
-	@GetMapping("/disney")
+	@RequestMapping(value="/disney", method = RequestMethod.GET)
 	public String disneyPage(Model model) {
-		DwarfService dwarfService = new DwarfService();
 		model.addAttribute("pageTitle","Disney Dwarfs");
-		model.addAttribute("dwarfs",dwarfService.getDisneyDwarfs());
+		model.addAttribute("dwarfs",dwarfService.getNumberOfDwarfs());
 		return "disney";
 	}
 	
-	@GetMapping("/tolkien")
+	@RequestMapping(value="/tolkien", method = RequestMethod.GET)
 	public String tolkienPage(Model model) {
-		DwarfService dwarfService = new DwarfService();
 		model.addAttribute("pageTitle","Tolkien Dwarfs");
-		model.addAttribute("dwarfs",dwarfService.getTolkienDwarfs());
+		model.addAttribute("dwarfs",dwarfService.getNumberOfDwarfs());
 		return "tolkien";
 	}
 	

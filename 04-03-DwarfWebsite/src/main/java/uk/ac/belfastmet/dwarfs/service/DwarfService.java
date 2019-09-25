@@ -1,19 +1,38 @@
 package uk.ac.belfastmet.dwarfs.service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import uk.ac.belfastmet.dwarfs.domain.Dwarf;
+import uk.ac.belfastmet.dwarfs.repository.DwarfRepository;
 
 @Service
 
 public class DwarfService {
 	
-	private ArrayList<Dwarf> disneyDwarfs;
-	private ArrayList<Dwarf> tolkienDwarfs;
+	@Autowired
+	private DwarfRepository dwarfRepository;
 	
-	public ArrayList<Dwarf> getDisneyDwarfs() {
+	//private ArrayList<Dwarf> disneyDwarfs;
+	//private ArrayList<Dwarf> tolkienDwarfs;
+	
+    public Iterable<Dwarf> getNumberOfDwarfs() {
+		
+		//gets dwarfs from database
+		Iterable <Dwarf> dwarfs = dwarfRepository.findAll();
+		Iterator <Dwarf> iterator = dwarfs.iterator();
+		ArrayList<Dwarf> list = new ArrayList<Dwarf>();
+		while (iterator.hasNext()) {
+			list.add(iterator.next());
+		}
+		return dwarfs;
+	}
+	
+	    /*
+        public ArrayList<Dwarf> getDisneyDwarfs() {
 		this.disneyDwarfs = new ArrayList<Dwarf>();
 		//add dwarfs here
 		this.disneyDwarfs.add(new Dwarf("Sleepy", "Disney", "Sleepy.png"));
@@ -24,7 +43,9 @@ public class DwarfService {
 		this.disneyDwarfs.add(new Dwarf("Sneezy", "Disney", "Sneezy.png"));
 		return this.disneyDwarfs;
 	}
+	*/
 	
+	/*
 	public ArrayList<Dwarf> getTolkienDwarfs() {
 		this.tolkienDwarfs = new ArrayList<Dwarf>();
 		//add dwarfs here
@@ -43,5 +64,6 @@ public class DwarfService {
 		this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
 		return this.tolkienDwarfs;
 	}
+	*/
 
 }
