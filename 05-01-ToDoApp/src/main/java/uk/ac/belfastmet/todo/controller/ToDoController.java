@@ -35,9 +35,9 @@ public class ToDoController {
 		model.addAttribute("pageTitle", "ToDo App Home");
 		logger.info("Controller - the page title is set to ToDo App Home");
 		logger.info("Controller- call getTasks method in service");
-		model.addAttribute("tasks", todoService.getTasks());
+		//model.addAttribute("tasks", todoService.getTasks());
+		model.addAttribute("tasks", todoService.getNumberOfTasks());
 		logger.info("Controller - Tasks arraylist contents returned to controller");
-		todoService.getNumberOfTasks();
 
 		return "index";
 	}
@@ -67,7 +67,7 @@ public class ToDoController {
 		model.addAttribute("pageTitle", "ToDo App Complete");
 		logger.info("Controller - the page title is set to ToDo App Complete");
 		logger.info("Controller- call getCompleteTasks method in service");
-		model.addAttribute("tasks", todoService.getCompleteTasks());
+		//model.addAttribute("tasks", todoService.getCompleteTasks());
 		logger.info("Controller - Complete asks arraylist contents returned to controller");
 
 		return "complete";
