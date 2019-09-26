@@ -13,7 +13,11 @@ import uk.ac.belfastmet.todo.service.ToDoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
+/**
+ * 
+ * @author CAS16117645
+ *
+ */
 @Controller
 @RequestMapping()
 public class ToDoController {
@@ -21,11 +25,12 @@ public class ToDoController {
 	@Autowired
 	private ToDoService todoService;
 
-	// logger class object for logging info
+	//logger class object for logging info
 	Logger logger = LoggerFactory.getLogger(ToDoController.class);
 
 	/**
 	 * this method requests index page and the getTasks method from service
+	 * @author CAS16117645
 	 * @param single model object
 	 * @return index html file
 	 */
@@ -44,6 +49,7 @@ public class ToDoController {
 
 	/**
 	 * this method requests the login page
+	 * @author CAS16117645
 	 * @param single model object
 	 * @return login html file
 	 */
@@ -58,8 +64,9 @@ public class ToDoController {
 
 	/**
 	 * this method requests completedTasks page and the getCompletedTasks method from service
+	 * @author CAS16117645
 	 * @param single model object
-	 * @return index html file
+	 * @return complete html file
 	 */
 	@RequestMapping(value="/complete", method = RequestMethod.GET)
 	public String completePage(Model model) {

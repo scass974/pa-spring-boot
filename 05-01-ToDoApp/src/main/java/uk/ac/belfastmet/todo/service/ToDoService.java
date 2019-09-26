@@ -13,14 +13,18 @@ import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
+/**
+ * 
+ * @author CAS16117645
+ *
+ */
 @Service
 public class ToDoService {
 
 	@Autowired
 	private TaskRepository taskRepository;
 
-	// logger class object for logging info
+	//logger class object for logging info
 	Logger logger = LoggerFactory.getLogger(ToDoController.class);
 	//ArrayList<Task> tasks = new ArrayList<Task>();
 	//ArrayList<Task> completeTasks = new ArrayList<Task>();
@@ -41,9 +45,14 @@ public class ToDoService {
 		return tasks;
 	}
 
+	
+	//Either delete this or leave it as a method to use for 
+	//simulated data when the server is unavailable for testing
+	//like this (all commmented) it is uuuuuuuuugly
+	
 	/**
 	 * method to create an arraylist of task objects
-	 * 
+	 * @author CAS16117645
 	 * @return arraylist of task objects
 	 */
 	/*
@@ -71,6 +80,7 @@ public class ToDoService {
 
 	/**
 	 * method to create an arraylist of completed tasks
+	 * @author CAS16117645
 	 * @return an arraylist of completed tasks
 	 */
 	/*

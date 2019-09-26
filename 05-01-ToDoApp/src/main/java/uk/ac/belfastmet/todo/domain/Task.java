@@ -7,11 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+/**
+ * 
+ * @author CAS16117645
+ *
+ */
 @Entity
 @Table(name="task")
 public class Task {
-	// instance variables
+	//instance variables
 	private String name;
 	private String personResponsible;
 	private Boolean status;
@@ -20,9 +24,9 @@ public class Task {
 	private int lengthMinutes;
 	private long id;
 
-	// getters & setters
+	//getters & setters
 	
-	//database column
+	//database name column
 	@Column(name = "name")
 	public String getName() {
 		return name;
@@ -31,7 +35,7 @@ public class Task {
 	public void setName(String name) {
 		this.name = name;
 	}
-	//database column
+	//database person responsible column
 	@Column(name = "personresponsible")
 	public String getPersonResponsible() {
 		return personResponsible;
@@ -40,7 +44,7 @@ public class Task {
 	public void setPersonResponsible(String personResponsible) {
 		this.personResponsible = personResponsible;
 	}
-	//database column
+	//database status column
 	@Column(name = "status")
 	public Boolean getStatus() {
 		return status;
@@ -49,7 +53,7 @@ public class Task {
 	public void setStatus(Boolean status) {
 		this.status = status;
 	}
-	//database column
+	//database priority column
 	@Column(name = "priority")
 	public String getPriority() {
 		return priority;
@@ -58,7 +62,7 @@ public class Task {
 	public void setPriority(String priority) {
 		this.priority = priority;
 	}
-	//database column
+	//database deadline column
 	@Column(name = "deadline")
 	public String getDeadline() {
 		return deadline;
@@ -67,7 +71,7 @@ public class Task {
 	public void setDeadline(String deadline) {
 		this.deadline = deadline;
 	}
-	//database column
+	//database length minutes column
 	@Column(name = "lengthminutes")
 	public int getLengthMinutes() {
 		return lengthMinutes;
@@ -76,7 +80,7 @@ public class Task {
 	public void setLengthMinutes(int lengthMinutes) {
 		this.lengthMinutes = lengthMinutes;
 	}
-    //database primary key column
+    //database primary key ID column
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
@@ -87,7 +91,7 @@ public class Task {
 		this.id = id;
 	}
 
-	// constructors
+	//constructors
 	public Task() {
 		super();
 	}
@@ -103,7 +107,7 @@ public class Task {
 		this.lengthMinutes = lengthMinutes;
 	}
 
-	// override toString method for debug and check
+	//override toString method for debug and check
 	public String toString() {
 		return "Name: " + name + "\n" + "Person Responsible: " + personResponsible + "\n" + "Status: " + status + "\n"
 				+ "Priority: " + priority + "\n" + "Deadline: " + deadline + "\n" + "Length in Minutes: " + lengthMinutes;
